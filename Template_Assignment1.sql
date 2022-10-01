@@ -105,8 +105,20 @@ SELECT COUNT(time)  	#Counts from time collumn
 FROM barrie_weather 	#takes data from database 
 WHERE dew_pt > 1; 		#takes time values only when the dew_pt collumn is above 1
 
+----------------------------------------
+
 -- Q11) Count the number of hours that the wind was blowing (wind_spd_kmh is greater than 0)
 -- and from a direction ranging between north and east (wind_dir_10d is between 0 and 9)
+
+# Andres Galeota
+# Lakehead ID: 1183215 
+# Georgian ID: 200550710
+
+SELECT COUNT(time)  	#Counts from time collumn
+FROM barrie_weather 	#takes data from database 
+WHERE wind_spd_kmh > 0  #takes data only if wind_spd_kmh is greater than 0
+AND wind_dir_10d BETWEEN 0 AND 9 #also takes data if wind_dir_10d
+-----------------------------------------
 
 -- Q12)  In the report only, in Barrie what percent of the time are the conditions listed in Q11 true?
 -----------------------------------------

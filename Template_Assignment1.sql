@@ -126,9 +126,44 @@ AND wind_spd_flag NOT LIKE '%M%'
 
 -- Q14) Fix the M vs Missing problem in the temperature flag field by using UPDATE to change any
 -- instances of Missing values to just plain M.
+# Q14
+
+# Ushno Roylee
+# Lakehead ID: 1183460
+# Georgian ID: 200550726
+
+# Update the table barrie_weather
+# It then specifies that temp_flag will be equal to M 
+# If only and if temp_flag starts with M
+# With a like statement 
+
+
+UPDATE barrie_weather
+SET temp_flag ='M'
+WHERE temp_flag LIKE 'M%';
+-----------------------------------------
 
 -- Q15) Use an update statement to change all ' ' values in the temp_flag column to NULL (no quotes,
 -- just the letters N-U-L-L) this will change.
 -- Hint: The values should end up looking like those in the humidex (hmdx) column.
 -- FYI: The best way to store null data is using the NULL value. Look to the humidex (hmdx)
 -- column for an example of this being implemented properly.
+
+# Q15
+
+# Ushno Roylee
+# Lakehead ID: 1183460
+# Georgian ID: 200550726
+
+# Update the table barrie_weather
+# It then specifies that temp_flag will be equal to NULL
+# If only and if temp_flag is like ''
+# With a like statement 
+
+
+UPDATE barrie_weather
+SET temp_flag = NULL
+WHERE temp_flag LIKE '';
+
+-----------------------------------------
+

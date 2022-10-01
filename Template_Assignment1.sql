@@ -93,8 +93,17 @@ CREATE TABLE `barrie_weather` (
 -- ‘Missing’ values.
 -- Note: There are a number of ways of doing this, please use LIKE
 
+-----------------------------------------
 -- Q10) Count (SELECT COUNT) the number of hours contained in this dataset, where the dew point
 -- temperature (dew_pt) is greater than one.
+
+# Andres Galeota
+# Lakehead ID: 1183215 
+# Georgian ID: 200550710
+
+SELECT COUNT(time)  	#Counts from time collumn
+FROM barrie_weather 	#takes data from database 
+WHERE dew_pt > 1; 		#takes time values only when the dew_pt collumn is above 1
 
 -- Q11) Count the number of hours that the wind was blowing (wind_spd_kmh is greater than 0)
 -- and from a direction ranging between north and east (wind_dir_10d is between 0 and 9)

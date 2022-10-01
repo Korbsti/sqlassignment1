@@ -100,12 +100,29 @@ CREATE TABLE `barrie_weather` (
 -- and from a direction ranging between north and east (wind_dir_10d is between 0 and 9)
 
 -- Q12)  In the report only, in Barrie what percent of the time are the conditions listed in Q11 true?
-
+-----------------------------------------
 -- Q13) Select all data for every hour of data where either the temperature (temp) is below freezing,
 -- or wind chill (wind_chill) was below zero. Additionally, the wind speed flag (wind_spd_flag)
 -- must indicate that there were no problems with the wind speed instrument (i.e. no M or
 -- Missing values present)
 -- BTW: an anemometer is an instrument that measures wind speed
+# Q13
+
+# Ushno Roylee
+# Lakehead ID: 1183460
+# Georgian ID: 200550726
+
+# Select all rows from table barrie_weater
+# it would then select from row names where, temp
+# wind_chill is less than 0 or temp is less than 0
+# it then checks if wind_spd_flag does NOT have an M inside of it
+# if it doesnt then return that row 
+
+SELECT * FROM barrie_weather
+WHERE (temp < 0
+OR wind_chill < 0)
+AND wind_spd_flag NOT LIKE '%M%'
+-----------------------------------------
 
 -- Q14) Fix the M vs Missing problem in the temperature flag field by using UPDATE to change any
 -- instances of Missing values to just plain M.

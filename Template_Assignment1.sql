@@ -79,9 +79,21 @@ CREATE TABLE `barrie_weather` (
 -- Q6) Select all data for every hour of data where the temperature (temp) was greater than 26.5.
 -- Provide an additional comment in your SQL script that states the number of rows returned.
 
+SELECT * 
+	FROM barrie_weather #This will select every column from the table
+	WHERE(temp>26.5); #This will return every row where the temperature is greater than 26.5
+-- 267 rows were returned
+
 -- Q7) Select the date_time, temp, pressure_kPA and wind_spd_kmh for every hour of data where
 -- the temperature was 24 or less and the air pressure (pressure_kPa) was greater than 96.83.
 -- Provide an additional comment in your SQL script that states the number of rows returned
+
+SELECT date_time, temp, pressure_kPa, wind_spd_kmh #Select the following columns from the table
+	FROM barrie_weather
+	WHERE temp<=24
+			AND pressure_kPa>96.83; #select rows where the temperature is greater than or equal to 24 
+# and pressure is greater than 96.83
+-- 13806 rows were returned
 
 -- Q8) Select the date and time (date_time), temperature (temp) and temperature flag (temp_flag)
 -- columns for every hour where temperature data has been marked as missing using an ‘M’
@@ -89,9 +101,19 @@ CREATE TABLE `barrie_weather` (
 -- In the report, record the date and time.
 -- Hint: remember that single quotes are required for text values.
 
+SELECT date_time, temp, temp_flag #Select the following columns from the table
+	FROM barrie_weather
+	WHERE temp_flag = 'M'; #Select the rows where temp flag is the character 'M'
+-- 11/18/2019 23:00
+
 -- Q9) Return the same results as in Question 8, except construct the query to return both ‘M’ and
 -- ‘Missing’ values.
 -- Note: There are a number of ways of doing this, please use LIKE
+
+SELECT date_time, temp, temp_flag #Select the following columns from the table
+	FROM barrie_weather
+	WHERE temp_flag LIKE 'M%'; #Select the rows where temp flag starts with M, so this will select
+# the rows with 'M' and "Missing"
 
 -----------------------------------------
 -- Q10) Count (SELECT COUNT) the number of hours contained in this dataset, where the dew point

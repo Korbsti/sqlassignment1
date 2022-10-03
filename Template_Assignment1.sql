@@ -121,6 +121,7 @@ AND wind_dir_10d BETWEEN 0 AND 9 #also takes data if wind_dir_10d
 -----------------------------------------
 
 -- Q12)  In the report only, in Barrie what percent of the time are the conditions listed in Q11 true?
+7585/15336 * 100 = 49.4587897757%
 -----------------------------------------
 -- Q13) Select all data for every hour of data where either the temperature (temp) is below freezing,
 -- or wind chill (wind_chill) was below zero. Additionally, the wind speed flag (wind_spd_flag)
@@ -170,6 +171,7 @@ UPDATE barrie_weather
 -- Hint: The values should end up looking like those in the humidex (hmdx) column.
 -- FYI: The best way to store null data is using the NULL value. Look to the humidex (hmdx)
 -- column for an example of this being implemented properly.
+
 # Q15
 
 # Ushno Roylee
@@ -183,8 +185,8 @@ UPDATE barrie_weather
 
 
 UPDATE barrie_weather
-	SET temp_flag = NULL
-		WHERE temp_flag LIKE '';
+SET temp_flag = NULL
+WHERE temp_flag LIKE '';
 
 -----------------------------------------
 

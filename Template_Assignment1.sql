@@ -143,7 +143,7 @@ SELECT *
 	FROM barrie_weather
 	WHERE (temp < 0
 		OR wind_chill < 0)
-        AND wind_spd_flag NOT LIKE '%M%'
+                AND wind_spd_flag NOT LIKE '%M%'
 -----------------------------------------
 
 -- Q14) Fix the M vs Missing problem in the temperature flag field by using UPDATE to change any
@@ -161,8 +161,8 @@ SELECT *
 
 
 UPDATE barrie_weather
-SET temp_flag ='M'
-WHERE temp_flag LIKE 'M%';
+	SET temp_flag ='M'
+		WHERE temp_flag LIKE 'M%';
 -----------------------------------------
 
 -- Q15) Use an update statement to change all ' ' values in the temp_flag column to NULL (no quotes,

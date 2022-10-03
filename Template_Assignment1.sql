@@ -170,7 +170,6 @@ UPDATE barrie_weather
 -- Hint: The values should end up looking like those in the humidex (hmdx) column.
 -- FYI: The best way to store null data is using the NULL value. Look to the humidex (hmdx)
 -- column for an example of this being implemented properly.
-
 # Q15
 
 # Ushno Roylee
@@ -184,8 +183,8 @@ UPDATE barrie_weather
 
 
 UPDATE barrie_weather
-SET temp_flag = NULL
-WHERE temp_flag LIKE '';
+	SET temp_flag = NULL
+		WHERE temp_flag LIKE '';
 
 -----------------------------------------
 

@@ -139,10 +139,11 @@ AND wind_dir_10d BETWEEN 0 AND 9 #also takes data if wind_dir_10d
 # it then checks if wind_spd_flag does NOT have an M inside of it
 # if it doesnt then return that row 
 
-SELECT * FROM barrie_weather
-WHERE (temp < 0
-OR wind_chill < 0)
-AND wind_spd_flag NOT LIKE '%M%'
+SELECT *
+	FROM barrie_weather
+	WHERE (temp < 0
+		OR wind_chill < 0)
+        AND wind_spd_flag NOT LIKE '%M%'
 -----------------------------------------
 
 -- Q14) Fix the M vs Missing problem in the temperature flag field by using UPDATE to change any

@@ -207,8 +207,8 @@ UPDATE barrie_weather
 
 
 UPDATE barrie_weather
-SET temp_flag = NULL
-WHERE temp_flag LIKE '';
+	SET temp_flag = NULL
+		WHERE temp_flag LIKE '';
 
 -----------------------------------------
 
